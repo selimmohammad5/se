@@ -1,0 +1,204 @@
+
+
+
+
+	*{
+		margin:0; padding:0; 
+		box-sizing:border-box; 
+		text-transform: capitalize; 
+		font-family:arial,helvetica;
+	}
+
+
+
+
+	.container{
+	  min-height: 100vh;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	  background:#ccc;
+	}
+	
+	
+	.container .body{
+		width:700px;
+		display:flex;
+		align-items:center;
+		background:#222;
+		border-radius:5px;
+		box-shadow:0 2px 5px red;
+		padding:10px 40px;
+		position:relative;
+		overflow:hidden;
+	}
+	
+	
+	.container .body .image img{
+		height:150px;
+		width:150px;
+		object-fit:cover;
+		border-radius:50%;
+		border:5px solid #fff;
+		box-shadow:0 0 5px red;
+		position:relative;
+	}
+	
+	
+	
+	.container .body .image::before{
+		content:"";
+		position:absolute;
+		top:-15px; 
+		right:70%;
+		height:300px;
+		width:300px;
+		background:#f0f0f0;
+		border-radius:50%;
+		box-shadow:10px 0 0 0 red;
+		
+	}
+	
+	
+	
+	.container .body .content{
+		padding-left:60px;
+	}
+	
+	.container .body .content .name{
+		padding-left:10px;
+		font-size:25px;
+		color:	#FFD700;
+		text-shadow:0 1px 1px red;
+	}
+	
+	
+	.container .body .content .post{
+		font-size:15px;
+		padding:10px 0;
+		margin:10px 5px;
+		border-radius:50px;
+		background:#ccc;
+		color:#333;
+		text-align:center;
+	}
+	
+	
+	
+	.container .body .content .contact{
+		margin-top:30px;
+		
+	}
+	
+	
+	
+	.container .body .content .contact li{
+		list-style-type:none;
+		margin:10px 0;
+		color:#ccc;
+		font-wight:600;
+		letter-spacing:2px;
+		
+	}
+	
+	
+	
+	
+	.container .body .content .contact li i{
+		height:35px;
+		width:35px;
+		line-height:35px;
+		border-radius:50%;
+		text-align:center;
+		background:#666;
+		margin-right:10px;
+		color:#fff;
+	
+	
+	}
+	
+	
+	
+	
+	
+	.container .body .content .icons{
+		position:absolute;
+		top:50%;
+		right:25px;
+		transform:translatey(-50%);
+		display:flex;
+		flex-flow:column;
+	}
+	
+	
+	.container .body .content .icons a{
+		text-decoration:none;
+		height:35px;
+		width:35px;
+		line-height:35px;
+		text-align:center;
+		background:#fff;
+		color: #blue;
+		border-radius:50%;
+		margin:5px 0;
+		
+	}
+	
+	
+	
+	
+	.container .body .content .icons a:hover{
+		color:#fff;
+		background:#ccc;
+	}
+	
+	
+	@media (max-width:768px){
+		.container .body{
+			flex-flow:column;
+			width:90%;
+		}
+		
+		.container .body .image::before{
+			width:100%;
+			box-shadow:0 15px 0 red;
+			top:-27%; 
+			left:0;
+			
+		}
+		
+		
+		.container .body .content{
+			width:100%;
+			text-align:center;
+			padding:50px 0;
+			
+		}
+		
+		
+		
+		.container .body .content .contact li{
+			text-align:left;
+		}
+		
+		
+		.container .body .content .icons{
+			top:93%; right:0;
+			width:100%;
+			flex-flow:row;
+			justify-content:center;
+			
+		}
+		
+		
+		
+		
+		
+		.container .body .content .icons a{
+			margin:0 15px;
+			
+		}
+		
+		
+		
+	}
